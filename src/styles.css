@@ -54,3 +54,7 @@ button:hover {
   display: flex;
   align-items: center;
 }
+
+.todo-item {
+  marigin: 6px;
+}
