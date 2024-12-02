@@ -44,6 +44,19 @@ button:hover {
   /* background-color: aquamarine; */
 }
 
+.complete-area {
+  border: 2px solid #aacfd0;
+  width: 400px;
+  min-height: 200px;
+
+  padding: 8px;
+  margin: 8px;
+
+  border-radius: 8px;
+  background-color: rgb(137, 243, 207);
+  /* background-color: aquamarine; */
+}
+
 .title {
   text-align: center;
   margin-top: 0;
