@@ -31,6 +31,7 @@ const onClickAdd = (element) => {
   deleteButton.addEventListener("click", () => {
     // 押された削除ボタンの親にあるlitagを未完了リストから削除
     const deleteTarget = deleteButton.closest("li"); //deleteButtonの親を探しに行き、liを見つけ、閉じる
+    document.getElementById("incomplete-list").removeChild(deleteTarget);
   });
 
   // 階層構造の実現
