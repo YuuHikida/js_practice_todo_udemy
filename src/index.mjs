@@ -23,10 +23,18 @@ const onClickAdd = (element) => {
   compleatButton.innerText = "完了";
   compleatButton.addEventListener("click", () => {
     //押された完了ボタンの親にあるlitagは以下の完了ボタンと削除ボタンを削除
-    const moveTarget =compleatButton.closest("li");
+    const moveTarget = compleatButton.closest("li");
     compleatButton.nextElementSibling.remove();
     compleatButton.remove();
 
+    // 戻すボタンを生成してdicタグは以下に設定
+    const backButton = document.createElement("button");
+    backButton.innerText = "戻す";
+
+    moveTarget.firstElementChild.appendChild(backButton);
+
+    //完了リストに移動
+    document.getElementById("complete-list").appendChild(moveTarget);
   });
 
   //button(削除)
