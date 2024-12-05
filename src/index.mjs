@@ -22,7 +22,11 @@ const onClickAdd = (element) => {
   const compleatButton = document.createElement("button");
   compleatButton.innerText = "完了";
   compleatButton.addEventListener("click", () => {
-    alert();
+    //押された完了ボタンの親にあるlitagは以下の完了ボタンと削除ボタンを削除
+    const moveTarget =compleatButton.closest("li");
+    compleatButton.nextElementSibling.remove();
+    compleatButton.remove();
+
   });
 
   //button(削除)
