@@ -5,7 +5,12 @@ const onClickAdd = (element) => {
   const inputText = document.getElementById("add-text").value;
   //textbotを空にする
   document.getElementById("add-text").value = "";
+  //未完了リストに追加
+  createIcomplteTodo(inputText);
+};
 
+//渡された引数をもとに未完了のTODOを作成する関数
+const createIcomplteTodo = (todo) => {
   //li生成
   const li = document.createElement("li");
 
@@ -16,7 +21,7 @@ const onClickAdd = (element) => {
   // /p tag
   const p = document.createElement("p");
   p.className = "todo-item";
-  p.innerText = inputText;
+  p.innerText = todo;
 
   //button(完了)createElement
   const compleatButton = document.createElement("button");
@@ -31,9 +36,7 @@ const onClickAdd = (element) => {
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
     // 戻す実装
-    backButton.addEventListener("click",()=>{
-      
-    });
+    backButton.addEventListener("click", () => {});
 
     moveTarget.firstElementChild.appendChild(backButton);
 
