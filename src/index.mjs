@@ -30,6 +30,10 @@ const onClickAdd = (element) => {
     // 戻すボタンを生成してdicタグは以下に設定
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
+    // 戻す実装
+    backButton.addEventListener("click",()=>{
+      
+    });
 
     moveTarget.firstElementChild.appendChild(backButton);
 
