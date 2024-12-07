@@ -36,7 +36,14 @@ const createIcomplteTodo = (todo) => {
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
     // 戻す実装
-    backButton.addEventListener("click", () => {});
+    backButton.addEventListener("click", () => {
+      //todoの内容を取得して、未完了リストに追加する
+      const context = backButton.previousElementSibling.innerText;
+      //console.log(context);
+      createIcomplteTodo(context);
+      // 押された戻すボタンの親にあるlitagを探して削除
+      backButton.closest("li").remove();
+    });
 
     moveTarget.firstElementChild.appendChild(backButton);
 
